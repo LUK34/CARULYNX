@@ -70,3 +70,30 @@
 - This imports the tqdm library, which is used to display a progress bar in the console for loops.
 - It's especially helpful when running tasks that take time, like processing files, downloads, etc.
 
+## What is DNS??
+- DNS (Domain Name System) is like the phonebook of the internet.
+- It translates domain names (like google.com) into IP addresses (like 142.250.195.14) that computers use to identify each other on the network.
+
+- **A (Address)**
+- Maps a domain name to an IPv4 address
+- Example: example.com → 93.184.216.34
+
+- **AAAA (Quad-A)**
+- Maps a domain name to an IPv6 address
+- Example: example.com → 2606:2800:220:1:248:1893:25c8:1946
+
+- **CNAME (Canonical Name)**
+- Points one domain name to another domain name
+- Example: www.example.com → example.com
+
+- **MX (Mail Exchange)**
+- Defines email servers for the domain
+- Example: email for example.com goes to mail.example.com
+
+- **TXT (Text)**
+- Stores text data for the domain
+- Often used for SPF records, domain verification, etc.
+
+- **SOA (Start of Authority)**
+- Contains administrative info about the domain
+- Includes: primary name server, admin email, domain serial number, refresh/retry/expiry settings
