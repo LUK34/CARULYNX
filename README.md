@@ -162,7 +162,43 @@
 - python 09_PDF_cracker.py "Hello Worldv3.pdf" -g -min 1 -max 4 -c 1234567890
 - python 09_PDF_cracker.py "Hello Worldv3.pdf" -w wordlist.txt
 
+## 10_Network_Scanner.py (Important)
+- Sends ARP requests to every host in the given subnet.
+- Collects IP, MAC, and hostname for each responding device.
+- Prints the results in a nice table.
+- scapy: Used for low-level packet crafting, sending, and receiving (e.g., ARP packets).
+- socket: Used to resolve IP addresses to hostnames.
+- threading: Enables concurrent scanning of multiple IPs.
+- Queue: Thread-safe queue to store results.
+- ipaddress: Helps in parsing and handling IP networks.
+- This function sends an ARP request to a given IP address and captures the response.
+- def scan(ip, result_queue):
+- Creates an ARP request packet where pdst is the target IP or IP range (e.g., "192.168.1.1/24").
+- arp_request=scapy.ARP(pdst=ip)
+- Combines the Ethernet and ARP request into a single packet.
+- packet=broadcast/arp_request
+- srp() sends the packet and receives replies at Layer 2 (Ethernet).
+- timeout=1 waits for 1 second.
+- verbose=False disables output.
+- The result is a list of answered packets.
+- If one machine does'nt have what we are searching for, we jump to the next machine.
+- That is why we have 1 second delay.
+- answer=scapy.srp(packet,timeout=1,verbose=False)[0] #Takes only the first line
+- Main driver function for the script. It takes a CIDR range (like 192.168.1.0/24) and performs the following
+- def main(cidr):
+- Start Threads for Each Host IP
+- for ip in network.hosts():
+- Creates and starts a thread per IP to scan them in parallel.
+- Each thread runs the scan() function.
+- thread=threading.Thread(target=scan, args=(str(ip), results_queue))
 
+## 11_Network_Scanner_v2.py
+- same as 10_Network_Scanner.py
+- but this time added progress bar and excel sheet to save the output.
+- Added a third argument (pbar) to the scan() function.
+- Updated all thread calls to pass that third argument correctly.
+- Used finally: pbar.update(1) to ensure progress is updated even if something goes wrong inside the scan() function.
+- Used csv.DictWriter to generate a CSV file named scan_results.csv.
 
 
 
