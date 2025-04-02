@@ -160,3 +160,9 @@
 - --max_workers: Number of parallel threads.
 
 - python 09_PDF_cracker.py "Hello Worldv3.pdf" -g -min 1 -max 4 -c 1234567890
+- python 09_PDF_cracker.py "Hello Worldv3.pdf" -w wordlist.txt
+
+
+
+
+
