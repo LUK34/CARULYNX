@@ -3,7 +3,7 @@
 ## 01_ErrorHandling.PY
 - Teaches you how to handle error using try and except block
 
-## 02_Threading.py
+## 02_Threading.py (Important)
 - This program demonstrates multithreading using Python's threading module.
 - Two functions are executed concurrently using separate threads.
 - 🔧 Function Definitions:
@@ -24,7 +24,7 @@
 - This programme teaches you how to write the contexts to a file name `data.txt`.
 - After writing the contents in that file, this programme will teach how to read the contents from that file.
 
-## 04_ThreadExecutionPool.py
+## 04_ThreadExecutionPool.py (Important)
 - concurrent.futures: Helps run tasks in parallel using threads or processes.
 - time: Used to pause/sleep the program for a few seconds.
 - random: Used to pick a random number (for sleep duration).
@@ -192,7 +192,7 @@
 - Each thread runs the scan() function.
 - thread=threading.Thread(target=scan, args=(str(ip), results_queue))
 
-## 11_Network_Scanner_v2.py
+## 11_Network_Scanner_v2.py (Important)
 - same as 10_Network_Scanner.py
 - but this time added progress bar and excel sheet to save the output.
 - Added a third argument (pbar) to the scan() function.
@@ -200,5 +200,8 @@
 - Used finally: pbar.update(1) to ensure progress is updated even if something goes wrong inside the scan() function.
 - Used csv.DictWriter to generate a CSV file named scan_results.csv.
 
+
+## 12_KeyLogger.py
+- Enhance version of keylogger -> not referred from video. This is from chat gpt.
 
 
