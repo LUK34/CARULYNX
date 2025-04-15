@@ -204,4 +204,17 @@
 ## 12_KeyLogger.py
 - Enhance version of keylogger -> not referred from video. This is from chat gpt.
 
+## 13_PortScanner.py
+- A port scanner helps identify open ports and associated services, giving clues about what software is in use (e.g., SSH, FTP, HTTP).
+- Vulnerability Assessment:
+- Once open ports are known, you can match them against known vulnerabilities (e.g., port 21 for FTP might be vulnerable if misconfigured).
+- Helps determine if there’s a weak point in the network to exploit.
+- Automation:
+- With Python, you can automate scanning multiple IPs and ports quickly.
+- Easily extend your scanner to do banner grabbing, service detection, or even custom exploits after scanning.
+- Banner Grabbing is a technique used by hackers, penetration testers, and network administrators to collect information about a service running on an open port.
+- When you connect to certain network services (like a web server, FTP, or SSH), they often respond with a "banner" – a text message that includes:
+- Service name
+- Version number
+- Sometimes even the OS or server configuration
 
