@@ -201,10 +201,10 @@
 - Used csv.DictWriter to generate a CSV file named scan_results.csv.
 
 
-## 12_KeyLogger.py
+## 12_KeyLogger.py (Important)
 - Enhance version of keylogger -> not referred from video. This is from chat gpt.
 
-## 13_PortScanner.py
+## 13_PortScanner.py (Important)
 - A port scanner helps identify open ports and associated services, giving clues about what software is in use (e.g., SSH, FTP, HTTP).
 - Vulnerability Assessment:
 - Once open ports are known, you can match them against known vulnerabilities (e.g., port 21 for FTP might be vulnerable if misconfigured).
@@ -217,4 +217,8 @@
 - Service name
 - Version number
 - Sometimes even the OS or server configuration
+
+## 14_HashCracker.py (Important)
+- Password that are encoded are cracked based on the various encryption algorithm present in word list.
+- Like the author said. This is not the best so need to enhance this. But this logic will work
 
